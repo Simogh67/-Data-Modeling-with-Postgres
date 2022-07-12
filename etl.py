@@ -9,8 +9,8 @@ from sql_queries import *
 
 def process_song_file(cur, filepath):
 
-    """ This function reads song metadata json files to insert data                 into songs and artists tables
-     Args:  cur : the psycopg2 cursor, filepath: str, the location                 of song file """
+    """ This function reads song metadata json files to insert data into songs and artists tables
+     Args:  cur : the psycopg2 cursor, filepath: str, the location of song file """
 
     # open song file
 
@@ -33,8 +33,9 @@ def process_song_file(cur, filepath):
 
 def process_log_file(cur, filepath):
 
-    """ This function reads logs json files to insert data into                       time, users, and song_play tables by filtering the logs                 that includes only cases where page==NextSong.
-       Args:  cur : psycopg2 cursor, filepath: str, The location                     of the log file """
+    """ This function reads logs json files to insert data into time, users, and song_play tables by filtering the logs 
+           that includes only cases where page==NextSong.
+       Args:  cur : psycopg2 cursor, filepath: str, The location of the log file """
 
     # open log file
 
@@ -122,7 +123,7 @@ def process_data(
 
     """ This function process all files of the dataset
         Args: cur: psycopg2 cursor, conn:  the psycopg2 connector
-              filepath: str, file path, func: function to process                     file in the given filepath"""
+              filepath: str, file path, func: function to process file in the given filepath"""
 
     # get all files matching extension from directory
 
